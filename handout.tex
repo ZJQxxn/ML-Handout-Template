@@ -1,0 +1,114 @@
+% Template created by Karol Kozioł (www.karol-koziol.net) for ShareLaTeX
+\documentclass[a4paper,9pt]{extarticle}
+
+\input{pre.tex}
+
+\title{机器学习讲义模板}
+\author{授课教师： 王贝伦  /  助教：张嘉琦，周嘉莹，黄旭}
+\date{2020}
+
+
+
+\begin{document}
+
+\maketitle
+
+\begin{multicols*}{2}
+
+\section{各级标题}
+    尽量不要超过三级标题，尽量只使用 section, subsection, subsubsection。对于需要并列解释的部分，使用itemize环境。
+    
+    \begin{itemize}
+        \item 第一条
+        \item 第二条
+        \item ...
+    \end{itemize}
+    
+    
+\section{基本结构}
+    讲义中每一个section是一个算法/模型的解释。一个section基本结构按顺序来说是
+    \begin{itemize}
+        \item [(1)] 相关问题的说明：用非数学的语言说明这个方法提出的motivation是什么？可以用来解决什么样的application？
+        \item [(2)] 算法/模型形式定义：详细解释这个模型的形式；说明输入、输出、损失函数形式。
+        \item [(3)] 算法/模型的数学细节：从数学的角度证明算法/模型的解。这部分要详细说明这个算法/模型的数学基础以及相关数学推导（solution, theorem, error bound）。
+        \item [(4)] 例子：举一个例子，用这个算法/模型对你提出的例子建模，推导针对这个例子的算法的解。
+        \item [(5)]编程实现：针对你在上面提到的例子，给出编程实现的细节。代码部分需要包括数据生成，模型建立以及求解的过程。
+    \end{itemize}
+
+\section{常用环境}
+
+\begin{mydef}{定义名称}
+    对新出现的概念或者数学符号进行定义。
+\end{mydef}
+
+\begin{example}
+    例子内容。
+\end{example}
+
+\begin{theorem}
+    定理内容
+\end{theorem}
+
+\begin{lemma}
+    引理。引理是证明一个定理需要的background。
+\end{lemma}
+
+\begin{corollary}
+    推论。推论是根据一个定理推导、发散出的新的结果。
+\end{corollary}
+
+\begin{pr}
+    证明。
+\end{pr}
+
+
+\section{数学公式}
+
+    每个数学公式需要编号，使用equation环境，对于需要换行的数学公式，在equation内使用aligned环境。
+    
+    单行公式：
+    \begin{equation}
+        a = b + c
+    \end{equation}
+    
+    多行公式：
+    \begin{equation}
+        \begin{aligned}
+        & a = 1 \\
+        & b = 2 \\
+        & c = a + b
+        \end{aligned}
+    \end{equation}
+    
+    矩阵:
+    \begin{equation}
+        a = \begin{bmatrix} 
+            1 & 0 \\\\
+            0 & 1 
+            \end{bmatrix}
+    \end{equation}
+\section{编程实现}
+    编程代码用Python实现，并用lstlisting环境表示。
+    \begin{lstlisting}[language=Python]
+    import numpy as np
+    
+    # 加法运算
+    a = 1
+    b = 2
+    c = a + b
+    print(c)
+    # Output: 3
+    \end{lstlisting}
+    
+\section{图片与表格}
+    图片用figure环境导入。表格用table环境导入。
+\section*{引用}
+    主要的引用需要说明，格式不需要太过正规，只要说明清楚就可以。
+    \begin{itemize}
+        \item [[1]] Strang, G., Strang, G., Strang, G., \& Strang, G. (1993). Introduction to linear algebra (Vol. 3). Wellesley, MA: Wellesley-Cambridge Press.
+        
+        \item [[2]] ABIDE: \url{http://fcon_1000.projects.nitrc.org/indi/abide/}
+    \end{itemize}
+
+\end{multicols*}
+\end{document}
