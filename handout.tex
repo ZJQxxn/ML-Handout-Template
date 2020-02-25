@@ -101,7 +101,27 @@
     \end{lstlisting}
     
 \section{图片与表格}
-    图片用figure环境导入。表格用table环境导入。
+    图片用myfig环境导入。表格用mytab环境导入。图片的放在图片下方，表格的标题放在表格上方。
+    每一个图片和表格都需要用标题简述内容。
+	
+\begin{myfig}[!htb]
+  \centering
+  \includegraphics[width=\linewidth]{images.png}
+  \captionof{figure}{my caption of the figure}
+\end{myfig}
+ 
+\begin{mytab}[!htb]
+  \captionof{table}{Table Caption}
+  \resizebox{!}{70pt}{
+  \begin{tabular}{|c|c|}
+    This & is \\
+    a & test
+  \end{tabular}
+  }
+\end{mytab}
+
+
+ 
 \section*{引用}
     主要的引用需要说明，格式不需要太过正规，只要说明清楚就可以。
     \begin{itemize}
