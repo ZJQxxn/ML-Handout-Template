@@ -120,7 +120,26 @@
   }
 \end{mytab}
 
+\section{算法伪代码}
+主要算法需要提供伪代码。使用algorithm环境。
 
+\begin{algorithm}[H]
+    \SetAlgoLined
+    \bfseries{输入：} 样本矩阵$x \in \mathbb{R}^{n \times p}$, 样本对应的标签$y \in \mathbb{R}^n$，最大迭代次数$T$和学习率$\alpha > 0$。
+     随机初始化系数向量$w$\;
+     \For{$t \gets 1$ to $T$}{
+       随机打乱$n$个样本的顺序\;
+       \For{$i \gets 1$ to $n$}{
+         $\theta \gets \theta - \alpha(y_i - x_i^\top\theta)x_i$ \; 
+       }
+       \If{满足停机准则}{
+         break\;
+       }
+     }
+     \bfseries{输出：} 预测系数$\theta$。
+     \caption{随机梯度下降算法(SGD)}
+     \label{algo:SGD}
+    \end{algorithm}
  
 \section*{引用}
     主要的引用需要说明，格式不需要太过正规，只要说明清楚就可以。
