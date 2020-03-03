@@ -134,3 +134,22 @@
 \newenvironment{mytab}
    {\par\bigskip\noindent\minipage{\linewidth}\centering}
    {\endminipage\par\bigskip}
+
+% For math operations
+\newcommand{\ie}{i.e., }
+\newcommand{\eg}{e.g., }
+
+\let\hat\widehat
+\let\tilde\widetilde
+
+\newcommand{\argmin}{\mathop{\mathrm{argmin}}}
+\newcommand{\argmax}{\mathop{\mathrm{argmax}}}
+
+\newcommand{\sign}{\mathop{\mathrm{sign}}}
+\newcommand{\tr}{\mathop{\mathrm{tr}}}
+
+\DeclareMathOperator{\Var}{{\rm Var}}
+\DeclareMathOperator*{\Cor}{\rm Corr}
+\DeclareMathOperator*{\Cov}{\rm Cov}
+\DeclareMathOperator*{\ind}{1{\hskip -2.5 pt}\hbox{I}}  % Indicator
+\newcommand{\smallfrac}[2]{{\textstyle \frac{#1}{#2}}}  
